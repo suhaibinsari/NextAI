@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Head from 'next/head';
 
+
 import React from 'react'
 
 export default function Home() {
@@ -12,7 +13,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="bg-gray-900 text-white min-h-screen flex flex-col items-center justify-center">
+      <main className=" text-white min-h-screen flex flex-col items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-4">Welcome to the Future</h1>
           <p className="text-lg md:text-xl mb-8">Unlock the power of AI to revolutionize your world</p>
@@ -33,6 +34,7 @@ export default function Home() {
 
 
     </div>
+
     </>
   )
 }

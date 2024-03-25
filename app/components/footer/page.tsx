@@ -1,18 +1,9 @@
 'use client'
-import Link from 'next/link'
 import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
 import logo from '@/public/logo.png'
 
-
-interface yearType {
-
-  year:number
-
-}
-
-export default function Footer() {
-
+const Footer = () => {
   const [currentYear, setCurrentYear] = useState('')
 
   useEffect(()=>{
@@ -143,3 +134,5 @@ export default function Footer() {
 </>
   )
 }
+
+export default Footer
