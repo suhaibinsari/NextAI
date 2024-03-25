@@ -4,6 +4,8 @@ import "./globals.css";
 import VideoBackground from "./components/video/page";
 import Navbar from "./components/navbar/page";
 import Footer from "./components/footer/page";
+import SideNavbar from "./components/sideNav/page";
+
 
 
 
@@ -23,6 +25,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
       <VideoBackground videoSource="/video.mp4" />
+      <SideNavbar/>
       <Navbar />
       {children}
       <Footer />

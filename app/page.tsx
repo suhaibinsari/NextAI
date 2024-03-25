@@ -16,8 +16,8 @@ export default function Home() {
 
       <main className=" text-white min-h-screen flex flex-col items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">Welcome to the Future</h1>
-          <p className="text-lg md:text-xl mb-8">Unlock the power of AI to revolutionize your world</p>
+          <h1 className="text-4xl md:text-6xl font-bold mb-4">Text to image with AI Art <br /> Generator</h1>
+          <p className="text-lg md:text-xl mb-8">Create awe-inspiring masterpieces effortlessly and explore the endless possibilities of AI generated art. Enter a prompt, choose a style, and watch Imagine - AI art generator bring your ideas to life!</p>
           <button className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md transition duration-300 ease-in-out">Get Started</button>
         </div>
         <div className="mt-12 max-w-3xl">
@@ -31,7 +31,7 @@ export default function Home() {
             <li className="mb-2">Machine learning algorithms</li>
           </ul>
 
-          <SideNavbar />
+          {/* <SideNavbar /> */}
         </div>
       </main>
 

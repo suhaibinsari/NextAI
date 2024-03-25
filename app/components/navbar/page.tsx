@@ -62,7 +62,6 @@ const Navbar = () => {
                     <a href="#" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About US</a>
                 </div>
             </div>
-
         </nav>
     );
 };

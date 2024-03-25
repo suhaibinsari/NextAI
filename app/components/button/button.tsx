@@ -11,34 +11,26 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 const Button = ({ width, height, children, ...props }: ButtonProps) => {
     return (
         <>
-            <button
+            {/* <button
                 className={`bg-[#8850FF] hover:shadow-md hover:shadow-white hover:transition-all text-white px-4 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800`}
                 style={{ width, height }}
                 {...props}
             >
                 {children}
-            </button>
-
-
-
-            {/* <button
-                className={`relative bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-indigo-500`}
-                style={{ width, height }}
-                {...props}
-            >
-                {children}
-                <span className='bg-white flex items-center justify-center w-12 h-12 rounded-full absolute left-[7rem] top-1/2 transform -translate-y-1/2 border-double border-4 border-sky-500'>
-                    <span className='-rotate-45'>
-                        <Image src={arrow} alt="Arrow" />
-                    </span>
-                </span>
             </button> */}
-
-
-
-
-
-
+            <div className="relative inline-flex  group">
+                <div
+                    className="absolute transitiona-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-full blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt">
+                </div>
+                <button
+                    className={`relative inline-flex items-center justify-center  text-white transition-all duration-200 bg-gray-900 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900`}
+                    role="button"
+                    style={{ width, height }}
+                    {...props}
+                >
+                    {children}
+                </button>
+            </div>
         </>
     );
 };
