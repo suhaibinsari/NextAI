@@ -1,5 +1,6 @@
 'use client'
 import React, { useState } from 'react';
+import Image from "next/image";
 
 export default function ImageGenerator() {
   const [text, setText] = useState('');
@@ -45,7 +46,7 @@ export default function ImageGenerator() {
     <div>
       <input className='text-black' onChange={(e) => setText(e.target.value)} type="text" placeholder='Enter something to generate' />
       <button onClick={onClickHandler}>Generate Image</button>
-      {url && <img src={url} alt="" width={200} height={200} />}
+      {url && <Image src={url} alt="" width={200} height={200} />}
     </div>
   );
 }
