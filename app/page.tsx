@@ -3,6 +3,7 @@ import Head from 'next/head';
 
 
 import React from 'react'
+import SideNavbar from "./components/sideNav/page";
 
 export default function Home() {
   return (
@@ -29,6 +30,8 @@ export default function Home() {
             <li className="mb-2">Computer vision</li>
             <li className="mb-2">Machine learning algorithms</li>
           </ul>
+
+          <SideNavbar />
         </div>
       </main>
 

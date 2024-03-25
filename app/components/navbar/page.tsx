@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import logo from '@/public/logo.png';
-import Button from '../../button/button';
+import Button from '../button/button';
 
 
 const Navbar = () => {
