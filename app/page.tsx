@@ -1,42 +1,87 @@
+
+'use client'
+
+import { useState } from 'react';
 import Image from "next/image";
 import Head from 'next/head';
+import Typewriter from 'typewriter-effect';
 
 
 import React from 'react'
 import SideNavbar from "./components/sideNav/page";
+import AutoWrittenInput from "./components/textEffect/page";
+import Button from './components/button/button';
 
 export default function Home() {
+
   return (
+
     <>
-    <div>
-      <Head>
-        <title>Futuristic AI Landing Page</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <div>
 
-      <main className=" text-white min-h-screen flex flex-col items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">Text to image with AI Art <br /> Generator</h1>
-          <p className="text-lg md:text-xl mb-8">Create awe-inspiring masterpieces effortlessly and explore the endless possibilities of AI generated art. Enter a prompt, choose a style, and watch Imagine - AI art generator bring your ideas to life!</p>
-          <button className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md transition duration-300 ease-in-out">Get Started</button>
-        </div>
-        <div className="mt-12 max-w-3xl">
-          <h2 className="text-2xl font-bold mb-4">What We Offer</h2>
-          <p className="text-lg mb-6">At Futuristic AI, we provide cutting-edge solutions utilizing the latest advancements in artificial intelligence technology. Our services include:</p>
-          <ul className="text-lg">
-            <li className="mb-2">AI-powered automation</li>
-            <li className="mb-2">Predictive analytics</li>
-            <li className="mb-2">Natural language processing</li>
-            <li className="mb-2">Computer vision</li>
-            <li className="mb-2">Machine learning algorithms</li>
-          </ul>
-
-          {/* <SideNavbar /> */}
-        </div>
-      </main>
+        <main className=" text-white min-h-screen flex flex-col items-center justify-center">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold mb-4">
+              Text to image with<br />
+              <Typewriter
+                options={{
+                  strings: ['AI Art Generator'],
+                  autoStart: true,
+                  loop: true,
+                }}
+              />
+            </h1>
+            <div className=' m-auto md:px-10 px-4'>
+              <div className='flex items-center flex-col justify-center'>
+              <p className="text-lg md:text-xl mb-8 px-5 md:px-32">Create awe-inspiring masterpieces effortlessly and explore the endless possibilities of AI generated art. Enter a prompt, choose a style, and watch Imagine - AI art generator bring your ideas to life!</p>
+                <div className='flex flex-col md:flex-row items-center justify-center gap-4'>
+                  <div className='relative'><input type="text" placeholder='Enter your imagination....' className='sm:w-[40rem] p-4 sm:h-[5rem] forced-colors:bg-purple-700 h-[42px] rounded-full text-black' /></div>
+                  <div className='md:absolute relative md:ml-[30rem]'><Button width="130px" height="60px">+ Generate</Button></div>
+                </div>
 
 
-    </div>
+
+
+
+
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+
+
 
     </>
   )
