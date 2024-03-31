@@ -5,7 +5,7 @@ import { useState } from 'react';
 import Image from "next/image";
 import Typewriter from 'typewriter-effect';
 import Button from './components/button/button';
-import GridItem from './components/grid/page';
+// import GridItem from './components/grid/page';
 
 export default function Home() {
 
@@ -147,7 +147,7 @@ export default function Home() {
 
 
           <div className='py-10'>
-            <GridItem gridData={gridData} />
+            {/* <GridItem gridData={gridData} /> */}
           </div>
 
           <div className='text-center sm:text-left w-full'>
