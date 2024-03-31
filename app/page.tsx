@@ -5,8 +5,20 @@ import { useState } from 'react';
 import Image from "next/image";
 import Typewriter from 'typewriter-effect';
 import Button from './components/button/button';
+import GridItem from './components/grid/page';
 
 export default function Home() {
+
+  const gridData = [
+    { id: 1, imageUrl: '/BackgroundReplace.webp', text1: 'Backgroud Replace', text2: 'Transform your photo with our AI Background Replace feature!' },
+    { id: 2, imageUrl: '/ExpandImage.webp', text1: 'Expand Image', text2: 'Expand your horizons with our AI Expand Image Feature' },
+    { id: 2, imageUrl: '/ImageRemix.webp', text1: 'Image Remix', text2: 'Add cretivity to your photos and turn them into beautiful artwork' },
+    { id: 2, imageUrl: '/Inpainting.webp', text1: 'Inpainting', text2: 'Say goodbye to unwanted objects with our AI Inpainting feature!' },
+    { id: 2, imageUrl: '/TexttoImage.webp', text1: 'Text to Image', text2: 'Transform your words into stunning words into stunning AI visuals with our text-to-image feature!' },
+
+    // Add more items as needed
+  ];
+
   const [text, setText] = useState('');
   const [url, setUrl] = useState('');
   const [images, setImages] = useState<string[]>([]);
@@ -56,9 +68,8 @@ export default function Home() {
   return (
 
     <>
-      <div>
-
-        <main className=" text-white min-h-screen flex flex-col items-center justify-center">
+      <div className='container py-48 m-auto md:px-10 px-4 font-Poppins'>
+        <div className='flex items-center flex-col justify-center'>
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-4">
               Text to image with<br />
@@ -111,43 +122,55 @@ export default function Home() {
                     </div>
                   </div>
                 )}
-
               </div>
             </div>
+          </div>
+
+
+          <div className=' py-10'>
+            <video
+              className='rounded-xl h-auto w-[45rem]'
+              autoPlay
+              muted
+              loop
+              playsInline
+            >
+              <source src="/ImagineWeb_New.mp4" type="video/mp4" />
+            </video>
+          </div>
+
+          <div className='text-center sm:text-left w-full'>
+            <p className='text-gray-500'>DISCOVER THE POTENTIAL OF</p>
+            <h1 className='font-bold text-4xl'>AI Image Generator Tools</h1>
+            <p className='text-gray-500'>Explore Our AI Image Generator Tools for Creating Captivating AI Generated Art. Explore a world of infinite inspiration and take your artworks to new heights with our AI image generator tools.</p>
+          </div>
+
+
+          <div className='py-10'>
+            <GridItem gridData={gridData} />
+          </div>
+
+          <div className='text-center sm:text-left w-full'>
+            <p className='text-gray-500'>DIVE INTO THE WORLD OF</p>
+            <h1 className='font-bold text-4xl'>AI-Generated Art</h1>
+            <p className='text-gray-500'>See Imagines potential unfold and create captivating art on our Text-to-Art Generator</p>
           </div>
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-        </main>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        </div>
       </div>
+
+
+
+
+
+
+
+
+
 
 
 

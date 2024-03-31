@@ -15,13 +15,12 @@ const Navbar = () => {
 
     return (
         <nav className="sticky top-0 z-50 bg-opacity-50 bg-gray-800 backdrop-filter backdrop-blur-md shadow-lg">
-            <div className="max-w-7xl mx-auto px-4">
-                <div className="flex justify-between items-center py-4 md:justify-start md:space-x-10">
+            <div className="max-w-7xl mx-auto px-10">
+                <div className="flex justify-between items-center py-42md:justify-start md:space-x-10">
                     <div className="flex justify-start lg:w-0 lg:flex-1">
-                        {/* <a href="#" className="flex items-center">
-                            <Image src={logo} alt="Logo" height={50} className='h-8 w-auto sm:h-10'/>
-                        </a> */}
-                        <span>Logo</span>
+                        <a href="#" className="flex items-center">
+                            <Image src={logo} alt="Logo" className='md:h-20 h-16 w-auto '/>
+                        </a>
                     </div>
 
                     <div className="hidden md:flex items-center justify-center flex-1 lg:w-0">

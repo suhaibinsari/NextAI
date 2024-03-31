@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import VideoBackground from "./components/video/page";
+
 import Navbar from "./components/navbar/page";
+Navbar
 import Footer from "./components/footer/page";
 import SideNavbar from "./components/sideNav/page";
 
