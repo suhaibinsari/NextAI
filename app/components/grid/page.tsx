@@ -1,16 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
 
-interface GridItemProps {
-    gridData: {
-        id: number;
-        imageUrl: string;
-        text1: string;
-        text2: string;
-    }[];
-}
 
-const GridItem: React.FC<GridItemProps> = ({ gridData }) => {
+
+const GridItem = ({ gridData }) => {
     return (
         <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-4">
             {gridData.map(({ id, imageUrl, text1, text2 }) => (
