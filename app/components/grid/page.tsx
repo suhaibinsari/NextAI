@@ -10,7 +10,8 @@ interface GridItemProps {
     }[];
 }
 
-const GridItem: React.FC<GridItemProps> = ({ gridData }) => {
+// const GridItem: React.FC<GridItemProps> = ({ gridData }) => {
+    export default function GridItem({gridData}:GridItemProps){
     return (
         <div className="grid grid-cols-3 gap-4">
             {gridData.map(({ id, imageUrl, text1, text2 }) => (
@@ -28,4 +29,14 @@ const GridItem: React.FC<GridItemProps> = ({ gridData }) => {
     );
 };
 
-export default GridItem;
+
+
+// import React from 'react'
+
+// export default function page() {
+//   return (
+//     <div>
+
+//     </div>
+//   )
+// }
