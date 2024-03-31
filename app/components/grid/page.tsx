@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 
 
-const GridItem = ({ gridData }) => {
+export default function GridItem ({ gridData }) {
     return (
         <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-4">
             {gridData.map(({ id, imageUrl, text1, text2 }) => (
@@ -21,4 +21,3 @@ const GridItem = ({ gridData }) => {
     );
 };
 
-export default GridItem;
