@@ -15,7 +15,7 @@ const Footer = () => {
 
   return (
     <>
-      <footer className="sticky bottom-0 w-full text-white bg-opacity-50 bg-gray-800 backdrop-filter backdrop-blur-md shadow-lg">
+      <footer className="bottom-0 w-full text-white bg-opacity-50 bg-gray-800 backdrop-filter backdrop-blur-md shadow-lg">
         <div className="w-full flex-col px-6 pt-20 lg:flex lg:px-10 xl:px-24">
           <div className="cursor-default lg:flex lg:flex-row lg:gap-x-16">
             <div>
@@ -43,7 +43,7 @@ const Footer = () => {
                       className="text-left  break-words  "
                       href="javascript:;"
                     >
-                      contact@techsolutionsco.net
+                      demo@email.com
                     </a>
                   </li>
                 </ul>

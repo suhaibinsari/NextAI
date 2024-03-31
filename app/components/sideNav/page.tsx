@@ -11,7 +11,7 @@ const SideNavbar = () => {
     return (
         <>
             <div className='hidden sm:block'>
-                <nav className="fixed top-0 right-10 bottom-0 flex items-center justify-center ">
+                <nav className="fixed top-0 right-5 bottom-0 flex items-center justify-center z-[100] ">
                     <div className="border-gray-600 border bg-opacity-50 backdrop-filter backdrop-blur-md shadow-lg rounded-xl p-1 text-white flex flex-col space-y-2 items-center justify-center">
                         {socialLinks.map((link, index) => (
                             <a key={index} href={link.url} target="_blank" rel="noopener noreferrer" className=" hover:bg-gray-400 hover:rounded-lg hover:transition-all duration-300 p-2">

@@ -12,7 +12,7 @@ interface GridItemProps {
 
 const GridItem: React.FC<GridItemProps> = ({ gridData }) => {
     return (
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-4">
             {gridData.map(({ id, imageUrl, text1, text2 }) => (
                 <div key={id} className='rounded-xl bg-opacity-50 bg-gray-800 backdrop-filter backdrop-blur-md shadow-lg h-auto w-auto hover:bg-gray-800 transition-all duration-300'>
                     <div className='p-2'>
@@ -29,5 +29,3 @@ const GridItem: React.FC<GridItemProps> = ({ gridData }) => {
 };
 
 export default GridItem;
-
-

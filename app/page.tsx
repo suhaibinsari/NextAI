@@ -9,16 +9,6 @@ import GridItem from './components/grid/page';
 
 export default function Home() {
 
-  const gridData = [
-    { id: 1, imageUrl: '/BackgroundReplace.webp', text1: 'Backgroud Replace', text2: 'Transform your photo with our AI Background Replace feature!' },
-    { id: 2, imageUrl: '/ExpandImage.webp', text1: 'Expand Image', text2: 'Expand your horizons with our AI Expand Image Feature' },
-    { id: 2, imageUrl: '/ImageRemix.webp', text1: 'Image Remix', text2: 'Add cretivity to your photos and turn them into beautiful artwork' },
-    { id: 2, imageUrl: '/Inpainting.webp', text1: 'Inpainting', text2: 'Say goodbye to unwanted objects with our AI Inpainting feature!' },
-    { id: 2, imageUrl: '/TexttoImage.webp', text1: 'Text to Image', text2: 'Transform your words into stunning words into stunning AI visuals with our text-to-image feature!' },
-
-    // Add more items as needed
-  ];
-
   const [text, setText] = useState('');
   const [url, setUrl] = useState('');
   const [images, setImages] = useState<string[]>([]);
@@ -65,6 +55,13 @@ export default function Home() {
       setLoader(false)
     }
   };
+  const gridData = [
+    { id: 1, imageUrl: '/BackgroundReplace.webp', text1: 'Backgroud Replace', text2: 'Transform your photo with our AI Background Replace feature!' },
+    { id: 2, imageUrl: '/ExpandImage.webp', text1: 'Expand Image', text2: 'Expand your horizons with our AI Expand Image Feature' },
+    { id: 2, imageUrl: '/ImageRemix.webp', text1: 'Image Remix', text2: 'Add cretivity to your photos and turn them into beautiful artwork' },
+    { id: 2, imageUrl: '/Inpainting.webp', text1: 'Inpainting', text2: 'Say goodbye to unwanted objects with our AI Inpainting feature!' },
+    { id: 2, imageUrl: '/TexttoImage.webp', text1: 'Text to Image', text2: 'Transform your words into stunning words into stunning AI visuals with our text-to-image feature!' },
+  ];
   return (
 
     <>
@@ -91,7 +88,7 @@ export default function Home() {
                 <div className='grid sm:grid-cols-3 grid-cols-1 gap-4'>
                   {images.map((image, index) => (
                     <div key={index} className="bg-white border border-gray-200 rounded-md shadow-md p-4">
-                      <div className=""> {/* Adjust width for desktop */}
+                      <div className="">
                         <Image src={image} alt="" className="rounded-md" width={400} height={400} />
                       </div>
                     </div>
@@ -127,7 +124,7 @@ export default function Home() {
           </div>
 
 
-          <div className=' py-10'>
+          <div className=' py-20'>
             <video
               className='rounded-xl h-auto w-[45rem]'
               autoPlay
@@ -146,7 +143,7 @@ export default function Home() {
           </div>
 
 
-          <div className='py-10'>
+          <div className='py-20'>
             <GridItem gridData={gridData} />
           </div>
 
@@ -156,6 +153,7 @@ export default function Home() {
             <p className='text-gray-500'>See Imagines potential unfold and create captivating art on our Text-to-Art Generator</p>
           </div>
 
+          <p className="text-6xl text-center md:text-left lg:text-[10rem]  md:text-8xl w-full text-gray-500 font-bold py-20">Endless <br /> Possibilities, <br />just <span className='text-white'>imagine.</span></p>
 
 
 
