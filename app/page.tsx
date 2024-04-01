@@ -1,11 +1,15 @@
 
 'use client'
 
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Image from "next/image";
 import Typewriter from 'typewriter-effect';
 import Button from './components/button/button';
 import Grid from './components/grid/page';
+import SlideOnScroll from './components/carousel/page';
+import Details from './components/details/page'
+
+
 // import GridItem from './components/grid/page';
 
 
@@ -58,6 +62,14 @@ export default function Home() {
       setLoader(false)
     }
   };
+  const gridData = [
+    { id: 1, imageUrl: '/BackgroundReplace.webp', text1: 'Backgroud Replace', text2: 'Transform your photo with our AI Background Replace feature!' },
+    { id: 2, imageUrl: '/ExpandImage.webp', text1: 'Expand Image', text2: 'Expand your horizons with our AI Expand Image Feature' },
+    { id: 2, imageUrl: '/ImageRemix.webp', text1: 'Image Remix', text2: 'Add cretivity to your photos and turn them into beautiful artwork' },
+    { id: 2, imageUrl: '/Inpainting.webp', text1: 'Inpainting', text2: 'Say goodbye to unwanted objects with our AI Inpainting feature!' },
+    { id: 2, imageUrl: '/TexttoImage.webp', text1: 'Text to Image', text2: 'Transform your words into stunning words into stunning AI visuals with our text-to-image feature!' },
+  ];
+
 
   return (
 
@@ -119,8 +131,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-
-
           <div className=' py-20'>
             <video
               className='rounded-xl h-auto w-[45rem]'
@@ -132,45 +142,24 @@ export default function Home() {
               <source src="/ImagineWeb_New.mp4" type="video/mp4" />
             </video>
           </div>
-
           <div className='text-center sm:text-left w-full'>
             <p className='text-gray-500'>DISCOVER THE POTENTIAL OF</p>
             <h1 className='font-bold text-4xl'>AI Image Generator Tools</h1>
             <p className='text-gray-500'>Explore Our AI Image Generator Tools for Creating Captivating AI Generated Art. Explore a world of infinite inspiration and take your artworks to new heights with our AI image generator tools.</p>
           </div>
-
-
           <div className='py-20'>
-            {/* <GridItem gridData={gridData} /> */}
-
             <Grid />
           </div>
-
           <div className='text-center sm:text-left w-full'>
             <p className='text-gray-500'>DIVE INTO THE WORLD OF</p>
             <h1 className='font-bold text-4xl'>AI-Generated Art</h1>
             <p className='text-gray-500'>See Imagines potential unfold and create captivating art on our Text-to-Art Generator</p>
           </div>
-
           <p className="text-6xl text-center md:text-left lg:text-[10rem]  md:text-8xl w-full text-gray-500 font-bold py-20">Endless <br /> Possibilities, <br />just <span className='text-white'>imagine.</span></p>
-
-
-
-
+          <SlideOnScroll />
+          <Details />
         </div>
       </div>
-
-
-
-
-
-
-
-
-
-
-
-
     </>
   )
 }

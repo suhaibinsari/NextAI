@@ -19,8 +19,8 @@ const Footer = () => {
         <div className="w-full flex-col px-6 pt-20 lg:flex lg:px-10 xl:px-24">
           <div className="cursor-default lg:flex lg:flex-row lg:gap-x-16">
             <div>
-              <h2 className="text-2xl font-bold">
-                AI Works.
+              <h2 className="">
+                <Image src={logo} alt='AI-WORKS' width={100} height={100}/>
               </h2>
               <ul className="mt-4 text-sm flex flex-col items-start justify-start gap-2">
                 <li className="flex flex-row items-start">
