@@ -5,7 +5,10 @@ import { useState } from 'react';
 import Image from "next/image";
 import Typewriter from 'typewriter-effect';
 import Button from './components/button/button';
-import GridItem from './components/grid/page';
+import Grid from './components/grid/page';
+// import GridItem from './components/grid/page';
+
+
 
 export default function Home() {
 
@@ -55,13 +58,7 @@ export default function Home() {
       setLoader(false)
     }
   };
-  const gridData = [
-    { id: 1, imageUrl: '/BackgroundReplace.webp', text1: 'Backgroud Replace', text2: 'Transform your photo with our AI Background Replace feature!' },
-    { id: 2, imageUrl: '/ExpandImage.webp', text1: 'Expand Image', text2: 'Expand your horizons with our AI Expand Image Feature' },
-    { id: 2, imageUrl: '/ImageRemix.webp', text1: 'Image Remix', text2: 'Add cretivity to your photos and turn them into beautiful artwork' },
-    { id: 2, imageUrl: '/Inpainting.webp', text1: 'Inpainting', text2: 'Say goodbye to unwanted objects with our AI Inpainting feature!' },
-    { id: 2, imageUrl: '/TexttoImage.webp', text1: 'Text to Image', text2: 'Transform your words into stunning words into stunning AI visuals with our text-to-image feature!' },
-  ];
+
   return (
 
     <>
@@ -144,7 +141,9 @@ export default function Home() {
 
 
           <div className='py-20'>
-            <GridItem gridData={gridData} />
+            {/* <GridItem gridData={gridData} /> */}
+
+            <Grid />
           </div>
 
           <div className='text-center sm:text-left w-full'>
