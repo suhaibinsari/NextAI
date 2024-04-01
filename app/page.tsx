@@ -150,14 +150,16 @@ export default function Home() {
           <div className='py-20'>
             <Grid />
           </div>
-          <div className='text-center sm:text-left w-full'>
+          <div className='text-center sm:text-left w-full mb-20'>
             <p className='text-gray-500'>DIVE INTO THE WORLD OF</p>
             <h1 className='font-bold text-4xl'>AI-Generated Art</h1>
             <p className='text-gray-500'>See Imagines potential unfold and create captivating art on our Text-to-Art Generator</p>
           </div>
-          <p className="text-6xl text-center md:text-left lg:text-[10rem]  md:text-8xl w-full text-gray-500 font-bold py-20">Endless <br /> Possibilities, <br />just <span className='text-white'>imagine.</span></p>
+          <div className='overflow-x-hidden'>
           <SlideOnScroll />
+          </div>
           <Details />
+          <p className="text-6xl text-center md:text-left lg:text-[10rem]  md:text-8xl w-full text-gray-500 font-bold py-20">Endless <br /> Possibilities, <br />just <span className='text-white'>imagine.</span></p>
         </div>
       </div>
     </>
