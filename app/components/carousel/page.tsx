@@ -75,7 +75,7 @@ const SlideOnScroll: React.FC = () => {
       if (container1 && container2) {
         const scrollPosition = window.scrollY;
         const startSlidingAt = 0; // Adjust this to the specific scroll position where you want to start sliding
-        const endSlidingAt = 0~; // Adjust this to the specific scroll position where you want to stop sliding
+        const endSlidingAt = 0; // Adjust this to the specific scroll position where you want to stop sliding
         if (scrollPosition >= startSlidingAt && scrollPosition <= endSlidingAt) {
           const offset = scrollPosition - startSlidingAt;
           container1.style.transform = `translateX(-${offset}px)`;

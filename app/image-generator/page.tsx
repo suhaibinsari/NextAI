@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import Image from "next/image";
 
 export default function ImageGenerator() {
+  const token = process.env.HUGGING_FACE_TOKEN;
+
   const [text, setText] = useState('');
   const [url, setUrl] = useState('');
 
@@ -10,9 +12,9 @@ export default function ImageGenerator() {
     console.log(data)
     try {
       const response = await fetch(
-        "https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-2-1",
-        {
-          headers: { Authorization: "Bearer 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" },
+        "https://api-inference.huggingface.co/models/UnfilteredAI/NSFW-gen-v2",
+      {
+          headers: { Authorization: `Bearer ${token}` },
           method: "POST",
           body: JSON.stringify(data),
         }
