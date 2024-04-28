@@ -14,7 +14,7 @@ export default function ImageGenerator() {
       const response = await fetch(
         "https://api-inference.huggingface.co/models/UnfilteredAI/NSFW-gen-v2",
       {
-          headers: { Authorization: `Bearer ${token}` },
+          headers: { Authorization: 'Bearer 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' },
           method: "POST",
           body: JSON.stringify(data),
         }
